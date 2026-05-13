@@ -120,7 +120,7 @@
             </div>
           </div>
           <a href="https://ecourtsindia.com/lawyer/ahmed-ehtesham-kawkab" target="_blank" rel="noopener" class="ecourts-link">View case records on eCourts &rarr;</a>
-          </div>
+          </div><!-- /ps-text-block -->
         </div>
 
         <div class="ps-scroll-section" id="civil" data-num="02">
@@ -161,7 +161,7 @@
             </div>
           </div>
           <a href="https://ecourtsindia.com/lawyer/ahmed-ehtesham-kawkab" target="_blank" rel="noopener" class="ecourts-link">View case records on eCourts &rarr;</a>
-          </div>
+          </div><!-- /ps-text-block -->
         </div>
 
         <div class="ps-scroll-section" id="writ" data-num="03">
@@ -202,7 +202,7 @@
             </div>
           </div>
           <a href="https://ecourtsindia.com/lawyer/ahmed-ehtesham-kawkab" target="_blank" rel="noopener" class="ecourts-link">View case records on eCourts &rarr;</a>
-          </div>
+          </div><!-- /ps-text-block -->
         </div>
 
         <div class="ps-scroll-section" id="cyber" data-num="04">
@@ -232,7 +232,7 @@
             </div>
           </div>
           <a href="https://ecourtsindia.com/lawyer/ahmed-ehtesham-kawkab" target="_blank" rel="noopener" class="ecourts-link">View case records on eCourts &rarr;</a>
-          </div>
+          </div><!-- /ps-text-block -->
         </div>
 
         <div class="ps-scroll-section" id="corporate" data-num="05">
@@ -273,7 +273,7 @@
             </div>
           </div>
           <a href="https://ecourtsindia.com/lawyer/ahmed-ehtesham-kawkab" target="_blank" rel="noopener" class="ecourts-link">View case records on eCourts &rarr;</a>
-          </div>
+          </div><!-- /ps-text-block -->
         </div>
 
         <div class="ps-scroll-section" id="family" data-num="06">
@@ -314,7 +314,7 @@
             </div>
           </div>
           <a href="https://ecourtsindia.com/lawyer/ahmed-ehtesham-kawkab" target="_blank" rel="noopener" class="ecourts-link">View case records on eCourts &rarr;</a>
-          </div>
+          </div><!-- /ps-text-block -->
         </div>
 
         <div class="ps-scroll-section" id="service" data-num="07">
@@ -344,7 +344,7 @@
             </div>
           </div>
           <a href="https://ecourtsindia.com/lawyer/ahmed-ehtesham-kawkab" target="_blank" rel="noopener" class="ecourts-link">View case records on eCourts &rarr;</a>
-          </div>
+          </div><!-- /ps-text-block -->
         </div>
 
         <div class="ps-scroll-section" id="fir-quashing" data-num="08">
@@ -380,7 +380,7 @@
             </div>
           </div>
           <a href="https://ecourtsindia.com/lawyer/ahmed-ehtesham-kawkab" target="_blank" rel="noopener" class="ecourts-link">View case records on eCourts &rarr;</a>
-          </div>
+          </div><!-- /ps-text-block -->
         </div>
 
       </div>
@@ -428,7 +428,6 @@
   <div class="page-transition" id="page-transition"></div>
   <script src="shared.js"></script>
   <script>
-    // Image: fires when 15% visible
     const imgObs = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -436,17 +435,16 @@
           imgObs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.1 });
 
-    // Text block: fires slightly after, offset by 180ms
     const txtObs = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('visible'), 180);
+          setTimeout(() => entry.target.classList.add('visible'), 350);
           txtObs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.08 });
 
     document.querySelectorAll('.ps-img-wrap').forEach(el => imgObs.observe(el));
     document.querySelectorAll('.ps-text-block').forEach(el => txtObs.observe(el));
