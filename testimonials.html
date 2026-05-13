@@ -91,7 +91,10 @@
     }
     .ticker-detail { font-size: 0.65rem; color: var(--muted); letter-spacing: 0.03em; }
 
-    @media (max-width: 900px) {
+    .ticker-col-inner.paused,
+    .ticker-col:hover .ticker-col-inner {
+      animation-play-state: paused !important;
+    }
       .ticker-columns { grid-template-columns: 1fr 1fr; padding: 0 24px; }
       .ticker-col:nth-child(3) { display: none; }
     }
@@ -395,6 +398,14 @@
     }
 
     inners.forEach(({ id, speed, delay }) => setupCol(id, speed, delay));
+
+    // Pause on touch / click for mobile
+    document.querySelectorAll('.ticker-col').forEach(col => {
+      col.addEventListener('click', () => {
+        const inner = col.querySelector('.ticker-col-inner');
+        if (inner) inner.classList.toggle('paused');
+      });
+    });
   </script>
 </body>
 </html>
