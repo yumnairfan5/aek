@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Testimonials | AEK Law Chambers, Hyderabad</title>
+  <meta name="description" content="Read what clients say about AEK Law Chambers and Ahmed Ehtesham Kawkab, Advocate, Telangana High Court." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://aeklawchambers.in/testimonials.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
+  <style>
+    .t-hero { padding: calc(var(--nav-h) + 80px) 0 48px; }
+
+    /* Fixed viewport window for ticker */
+    .ticker-section {
+      position: relative;
+      height: 85vh;
+      min-height: 600px;
+      overflow: hidden;
+      margin-bottom: 80px;
+    }
+    /* top/bottom fades */
+    .ticker-section::before,
+    .ticker-section::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0;
+      height: 90px;
+      z-index: 10;
+      pointer-events: none;
+    }
+    .ticker-section::before { top: 0;    background: linear-gradient(to bottom, var(--bg), transparent); }
+    .ticker-section::after  { bottom: 0; background: linear-gradient(to top,   var(--bg), transparent); }
+
+    .ticker-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+      height: 100%;
+    }
+    .ticker-col { overflow: hidden; height: 100%; }
+
+    /* Cards start offscreen left/right, slide in, then the whole inner scrolls up */
+    .ticker-col-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      will-change: transform;
+    }
+
+    /* Per-card slide-in state */
+    .ticker-card {
+      background: var(--card);
+      padding: 20px 20px;
+      flex-shrink: 0;
+      opacity: 0;
+      transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s;
+    }
+    /* col 1 and 3 slide from left, col 2 from right */
+    .ticker-col:nth-child(1) .ticker-card,
+    .ticker-col:nth-child(3) .ticker-card { transform: translateX(-50px); }
+    .ticker-col:nth-child(2) .ticker-card { transform: translateX(50px); }
+
+    .ticker-card.visible {
+      opacity: 1;
+      transform: translateX(0) !important;
+    }
+    .ticker-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
+
+    .ticker-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.95rem;
+      color: var(--dark);
+      line-height: 1.6;
+      margin: 8px 0 12px;
+      font-style: italic;
+    }
+    .ticker-name {
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: var(--dark);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin: 0 0 2px;
+    }
+    .ticker-detail { font-size: 0.65rem; color: var(--muted); letter-spacing: 0.03em; }
+
+    @media (max-width: 900px) {
+      .ticker-columns { grid-template-columns: 1fr 1fr; padding: 0 24px; }
+      .ticker-col:nth-child(3) { display: none; }
+    }
+    @media (max-width: 560px) {
+      .ticker-columns { grid-template-columns: 1fr; padding: 0 20px; }
+      .ticker-col:nth-child(2) { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grain-overlay" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+      <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+      <rect width="100%" height="100%" filter="url(#grain)" />
+    </svg>
+  </div>
+
+  <header class="site-nav" id="site-nav">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo">AEK Law Chambers</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="practice.html" class="nav-link">Expertise</a></li>
+        <li><a href="testimonials.html" class="nav-link active">Testimonials</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="vacancy.html" class="nav-link">Vacancies</a></li>
+        <li><a href="disclaimer.html" class="nav-link">Disclaimer</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary nav-cta">Send an Inquiry</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="t-hero">
+      <div class="container">
+        <div style="max-width:580px;">
+          <p class="section-eyebrow reveal-hero" data-delay="0">Client Feedback</p>
+          <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,5rem);font-weight:300;color:var(--dark);margin-bottom:16px;" class="reveal-hero" data-delay="1">What Clients Say.</h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker-section">
+      <div class="ticker-columns">
+
+        <div class="ticker-col">
+          <div class="ticker-col-inner" id="col1-inner">
+          <div class="ticker-card">
+            <span class="stars"><span class="stars-filled">★★★★★</span></span>
+            <p class="ticker-quote">Thank you Ahmed sir. You really changed our life. I'll be thankful to you all the time. I highly recommend his services to anyone who needs legal help.</p>
+            <div class="ticker-meta">
+              <p class="ticker-name">J. Prathik</p>
+              <p class="ticker-detail">Family & Matrimonial, Hyderabad</p>
+            </div>
+          </div>
+          <div class="ticker-card">
+            <span class="stars"><span class="stars-filled">★★★★★</span></span>
+            <p class="ticker-quote">The lawyer was always available to answer my questions and clear all my doubts about the case. He handles cases very carefully, focusing on every detail of the opposing party's conduct.</p>
+            <div class="ticker-meta">
+              <p class="ticker-name">Avula Balraj</p>
+              <p class="ticker-detail">Civil Litigation, Ranga Reddy</p>
+            </div>
+          </div>
+          <div class="ticker-card">
+            <span class="stars"><span class="stars-filled">★★★★★</span></span>
+            <p class="ticker-quote">We are very thankful to Advocate Ehtesham Sir for successfully handling the child custody case. Due to his strong legal approach and guidance, custody was granted in favour of my sister, ensuring the child's welfare and future stability.</p>
+            <div class="ticker-meta">
+              <p class="ticker-name">Mohammed Shamsuddin</p>
+              <p class="ticker-detail">Family & Matrimonial, Hyderabad</p>
+            </div>
+          </div>
+          <div class="ticker-card">
+            <span class="stars"><span class="stars-filled">★★★★★</span></span>
+            <p class="ticker-quote">Advocate Ehtesham Sir handled the Domestic Violence case with great professionalism and sensitivity. His efforts helped us obtain protection and relief from harassment, and the court recognised the genuine issues faced by my sister.</p>
+            <div class="ticker-meta">
+              <p class="ticker-name">Mohammed Shamsuddin</p>
+              <p class="ticker-detail">Family & Matrimonial, Hyderabad</p>
+            </div>
+          </div>
+          <div class="ticker-card">
+            <span class="stars"><span class="stars-filled">★★★★★</span></span>
+            <p class="ticker-quote">We sincerely appreciate Advocate Ehtesham Sir for securing maintenance for my sister in a timely manner. His clear guidance and effective representation ensured financial support was granted by the court without delay.</p>
+            <div class="ticker-meta">
+              <p class="ticker-name">Mohammed Shamsuddin</p>
+              <p class="ticker-detail">Family & Matrimonial, Hyderabad</p>
+            </div>
+          </div>
+          <div class="ticker-card">
+            <span class="stars"><span class="stars-filled">★★★★★</span></span>
+            <p class="ticker-quote">We are grateful to Advocate Ehtesham Sir for his support in the civil property matter involving financial deception. He handled everything with clarity, dedication, and transparency. I highly recommend him to anyone in need of reliable legal support.</p>
+            <div class="ticker-meta">
+              <p class="ticker-name">Mohammed Shamsuddin</p>
+              <p class="ticker-detail">Civil Litigation, Hyderabad</p>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="ticker-col">
+          <div class="ticker-col-inner" id="col2-inner">
+          <div class="ticker-card">
+            <span class="stars"><span class="stars-filled">★★★★★</span></span>
+            <p class="ticker-quote">Professional, efficient, and reliable. My case was handled with clarity and care, and I am satisfied with the outcome.</p>
+            <div class="ticker-meta">
+              <p class="ticker-name">Client, Hyderabad</p>
+              <p class="ticker-detail">Family & Matrimonial, Hyderabad</p>
+            </div>
+          </div>
+          <div class="ticker-card">
+            <span class="stars"><span class="stars-filled">★★★★★</span></span>
+            <p class="ticker-quote">Currently handling my civil matter with professionalism and clear guidance. Communication is consistent, and the case is progressing smoothly.</p>
+            <div class="ticker-meta">
+              <p class="ticker-name">Client, Hyderabad</p>
+              <p class="ticker-detail">Civil Litigation, Hyderabad</p>
+            </div>
+          </div>
+          <div class="ticker-card">
+            <span class="stars"><span class="stars-filled">★★★★★</span></span>
+            <p class="ticker-quote">One of the best advocates for any legal enquiry. Service was professional and satisfactory. After contacting Mr. Ahmed Ehtesham, I got a quick response and solution to my legal issue. I recommend him for any legal matter.</p>
+            <div class="ticker-meta">
+              <p class="ticker-name">Client, Mumbai</p>
+              <p class="ticker-detail">Family & Matrimonial, Mumbai</p>
+            </div>
+          </div>
+          <div class="ticker-card">
+            <span class="stars"><span class="stars-filled">★★★★★</span></span>
+            <p class="ticker-quote">I had a positive experience working with the advocate on my land dispute case. The legal process was explained clearly, and I was guided through each step with patience and clarity. The strategic advice provided gave me confidence that my case was being handled with care and expertise.</p>
+            <div class="ticker-meta">
+              <p class="ticker-name">Bodishe Upesh</p>
+              <p class="ticker-detail">Civil Litigation, Hyderabad</p>
+            </div>
+          </div>
+          <div class="ticker-card">
+            <span class="stars"><span class="stars-filled">★★★★★</span></span>
+            <p class="ticker-quote">Excellent lawyer. Trustworthy and delivers on time.</p>
+            <div class="ticker-meta">
+              <p class="ticker-name">Syed Ali Akbar Hussain</p>
+              <p class="ticker-detail">Criminal Defence, Hyderabad</p>
+            </div>
+          </div>
+          <div class="ticker-card">
+            <span class="stars"><span class="stars-filled">★★★★★</span></span>
+            <p class="ticker-quote">Advocate sir is very professional and handles all cases with great care. When needed, he guides his clients with proper guidance on all aspects. His very detailed study and research on every case is what sets him apart.</p>
+            <div class="ticker-meta">
+              <p class="ticker-name">Mohammed Shujauddin</p>
+              <p class="ticker-detail">Family & Matrimonial, Hyderabad</p>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="ticker-col">
+          <div class="ticker-col-inner" id="col3-inner">
+          <div class="ticker-card">
+            <span class="stars"><span class="stars-filled">★★★★★</span></span>
+            <p class="ticker-quote">Good service and professional handling.</p>
+            <div class="ticker-meta">
+              <p class="ticker-name">Aavula Varalaxmi</p>
+              <p class="ticker-detail">Criminal Defence, Ranga Reddy</p>
+            </div>
+          </div>
+          <div class="ticker-card">
+            <span class="stars"><span class="stars-filled">★★★★★</span></span>
+            <p class="ticker-quote">Good response and excellent service.</p>
+            <div class="ticker-meta">
+              <p class="ticker-name">Client, Hyderabad</p>
+              <p class="ticker-detail">Family & Matrimonial, Hyderabad</p>
+            </div>
+          </div>
+          <div class="ticker-card">
+            <span class="stars"><span class="stars-filled">★★★★★</span></span>
+            <p class="ticker-quote">Responds on time and provides excellent service.</p>
+            <div class="ticker-meta">
+              <p class="ticker-name">Panga Narasimha</p>
+              <p class="ticker-detail">Civil Litigation, Ranga Reddy</p>
+            </div>
+          </div>
+          <div class="ticker-card">
+            <span class="stars"><span class="stars-filled">★★★★★</span></span>
+            <p class="ticker-quote">I would like to express my sincere gratitude to Ehtesham Sir for his exceptional legal support and guidance. He has been incredibly helpful in my sister's child custody case, DVC interim maintenance matter, and the ongoing civil case. His professionalism, clarity, and dedication have made a very difficult time much more manageable for our family. We truly appreciate his efforts and highly recommend his services.</p>
+            <div class="ticker-meta">
+              <p class="ticker-name">Mohammed Shamsuddin</p>
+              <p class="ticker-detail">Family & Matrimonial, Hyderabad</p>
+            </div>
+          </div>
+          <div class="ticker-card">
+            <span class="stars"><span class="stars-filled">★★★★★</span></span>
+            <p class="ticker-quote">I am truly thankful to Ehtesham Sir for his support across my legal matters. With his guidance, I was able to secure child custody, which means everything to me. In my Domestic Violence case, his focused efforts helped me receive interim maintenance within a year, bringing much-needed stability during a difficult time. He is thorough, straightforward, and ensures everything is handled properly without rushing the process. I would confidently recommend Ehtesham Sir to anyone looking for a reliable and result-oriented lawyer.</p>
+            <div class="ticker-meta">
+              <p class="ticker-name">Mohammed Shamsuddin</p>
+              <p class="ticker-detail">Family & Matrimonial, Hyderabad</p>
+            </div>
+          </div>
+          <div class="ticker-card">
+            <span class="stars"><span class="stars-filled">★★★★★</span></span>
+            <p class="ticker-quote">I would like to express my sincere gratitude to Advocate Ehtesham Sir, who is not only highly professional but also a genuinely humble and compassionate person. My sister went through an extremely difficult situation after 15 years of marriage. Under his expert guidance, we filed multiple cases including Child Custody, Domestic Violence, Maintenance, and a Civil Matter. Thanks to his dedication, the court ruled in our favour for child custody and granted maintenance within a stipulated time frame. His approach is highly professional, transparent, and reassuring. I strongly recommend Advocate Ehtesham Sir to anyone facing serious legal challenges.</p>
+            <div class="ticker-meta">
+              <p class="ticker-name">Mohammed Shamsuddin</p>
+              <p class="ticker-detail">Family & Matrimonial, Hyderabad</p>
+            </div>
+          </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <p style="font-size:0.72rem;color:var(--muted);text-align:center;padding-bottom:60px;letter-spacing:0.06em;">Testimonials shown with client consent. Names anonymised where requested.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">AEK Law Chambers</a>
+        <p class="footer-enrollment">Bar Council of Telangana</p>
+      </div>
+      <div class="footer-links">
+        <h4 class="footer-links-title">Practice</h4>
+        <a href="practice.html#criminal">Criminal Defence</a>
+        <a href="practice.html#civil">Civil Litigation</a>
+        <a href="practice.html#writ">Writ Petitions</a>
+        <a href="practice.html#corporate">Corporate &amp; NCLT</a>
+      </div>
+      <div class="footer-links">
+        <h4 class="footer-links-title">Navigate</h4>
+        <a href="about.html">About</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+        <a href="vacancy.html">Vacancies</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </div>
+      <div class="footer-contact">
+        <h4 class="footer-links-title">Contact</h4>
+        <p>Flat No.102, Buckingham Amrutha Valley,<br/>Road No. 12, Banjara Hills,<br/>Hyderabad 500 034</p>
+        <a href="tel:+919949452405" class="inline-link">99494 52405</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2007–2026 AEK Law Chambers. Est. 2007. <a href="disclaimer.html" class="footer-disclaimer-link">Disclaimer</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919949452405" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <div class="page-transition" id="page-transition"></div>
+  <script src="shared.js"></script>
+  <script>
+    const inners = [
+      { id: 'col1-inner', speed: 35, delay: 0 },
+      { id: 'col2-inner', speed: 42, delay: -14 },
+      { id: 'col3-inner', speed: 30, delay: -7 },
+    ];
+
+    function setupCol(id, speed, delay) {
+      const inner = document.getElementById(id);
+      if (!inner) return;
+
+      const orig = Array.from(inner.children);
+
+      // Step 1: slide cards in, staggered
+      orig.forEach((c, i) => {
+        setTimeout(() => c.classList.add('visible'), i * 90);
+      });
+
+      // Step 2: after slide-in completes, clone + start scroll
+      const slideTime = orig.length * 90 + 600;
+      setTimeout(() => {
+        // clone for seamless loop
+        orig.forEach(c => {
+          const clone = c.cloneNode(true);
+          clone.classList.add('visible');
+          clone.setAttribute('aria-hidden', 'true');
+          inner.appendChild(clone);
+        });
+
+        // measure and inject keyframe
+        function go() {
+          const gap = 16;
+          let h = 0;
+          orig.forEach(c => { h += c.offsetHeight + gap; });
+          const sid = 'ks-' + id;
+          let el = document.getElementById(sid);
+          if (!el) { el = document.createElement('style'); el.id = sid; document.head.appendChild(el); }
+          el.textContent =
+            '@keyframes ks_' + id + '{0%{transform:translateY(0)}100%{transform:translateY(-' + h + 'px)}}' +
+            '#' + id + '{animation:ks_' + id + ' ' + speed + 's linear ' + delay + 's infinite;}';
+        }
+
+        if (document.fonts && document.fonts.ready) { document.fonts.ready.then(go); }
+        else { setTimeout(go, 200); }
+
+      }, slideTime);
+    }
+
+    inners.forEach(({ id, speed, delay }) => setupCol(id, speed, delay));
+  </script>
+</body>
+</html>
