@@ -897,7 +897,8 @@ button { font-family: 'DM Sans', sans-serif; cursor: pointer; border: none; back
   .courts-bar-inner { padding: 0 24px; }
   .section-rule { margin: 0 24px; }
   .nav-inner { padding: 0 24px; }
-  .ps-scroll-section { padding: 64px 24px; }
+  .ps-scroll-section { padding: 64px 24px !important; }
+  .practice-scroller:not(.images-loaded) .ps-scroll-section { padding: 64px 24px !important; }
 }
 
 /* ========== NOTABLE CASES ========== */
