@@ -91,10 +91,7 @@
     }
     .ticker-detail { font-size: 0.65rem; color: var(--muted); letter-spacing: 0.03em; }
 
-    .ticker-col-inner.paused,
-    .ticker-col:hover .ticker-col-inner {
-      animation-play-state: paused !important;
-    }
+    @media (max-width: 900px) {
       .ticker-columns { grid-template-columns: 1fr 1fr; padding: 0 24px; }
       .ticker-col:nth-child(3) { display: none; }
     }
@@ -115,7 +112,7 @@
 
   <header class="site-nav" id="site-nav">
     <nav class="nav-inner">
-      <a href="index.html" class="nav-logo">AEK Law Chambers</a>
+      <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="AEK Law Chambers" class="nav-logo-img" /></a>
       <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -312,7 +309,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="index.html" class="footer-logo">AEK Law Chambers</a>
+        <a href="index.html" class="footer-logo"><img src="assets/logo.png" alt="AEK Law Chambers" class="footer-logo-img" /></a>
         <p class="footer-enrollment">Bar Council of Telangana</p>
       </div>
       <div class="footer-links">
@@ -398,14 +395,6 @@
     }
 
     inners.forEach(({ id, speed, delay }) => setupCol(id, speed, delay));
-
-    // Pause on touch / click for mobile
-    document.querySelectorAll('.ticker-col').forEach(col => {
-      col.addEventListener('click', () => {
-        const inner = col.querySelector('.ticker-col-inner');
-        if (inner) inner.classList.toggle('paused');
-      });
-    });
   </script>
 </body>
 </html>

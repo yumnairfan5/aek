@@ -51,10 +51,15 @@ button { font-family: 'DM Sans', sans-serif; cursor: pointer; border: none; back
   padding: 0 40px; height: 100%;
 }
 .nav-logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.15rem; font-weight: 600;
-  letter-spacing: 0.05em; text-transform: uppercase;
-  color: var(--dark); flex-shrink: 0;
+  display: flex; align-items: center;
+  flex-shrink: 0;
+}
+.nav-logo-img {
+  height: 48px;
+  width: 48px;
+  object-fit: contain;
+  display: block;
+  border-radius: 50%;
 }
 .nav-links {
   display: flex; align-items: center; gap: 40px;
@@ -310,7 +315,7 @@ button { font-family: 'DM Sans', sans-serif; cursor: pointer; border: none; back
   padding-top: 60px;
 }
 
-/* ---- Image: big dramatic lift ---- */
+/* ---- Inline image: simple slide-up on scroll ---- */
 .ps-img-wrap {
   width: 100%;
   aspect-ratio: 21/9;
@@ -318,32 +323,18 @@ button { font-family: 'DM Sans', sans-serif; cursor: pointer; border: none; back
   margin-bottom: 36px;
   background: var(--card);
   opacity: 0;
-  transform: translateY(140px) scale(0.94);
-  transition: opacity 1.4s cubic-bezier(0.16,1,0.3,1),
-              transform 1.4s cubic-bezier(0.16,1,0.3,1);
-  will-change: opacity, transform;
+  transform: translateY(48px);
+  transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1),
+              transform 0.7s cubic-bezier(0.16,1,0.3,1);
 }
 .ps-img-wrap.visible {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translateY(0);
 }
 .ps-img-wrap img {
   width: 100%; height: 100%;
   object-fit: cover;
   filter: grayscale(0.15);
-}
-
-/* ---- Text block: rises after the image settles ---- */
-.ps-text-block {
-  opacity: 0;
-  transform: translateY(80px);
-  transition: opacity 1.2s cubic-bezier(0.16,1,0.3,1),
-              transform 1.2s cubic-bezier(0.16,1,0.3,1);
-  will-change: opacity, transform;
-}
-.ps-text-block.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* Practice page header */
@@ -434,10 +425,15 @@ button { font-family: 'DM Sans', sans-serif; cursor: pointer; border: none; back
   gap: 60px; padding-bottom: 60px;
 }
 .footer-logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem; font-weight: 600;
-  letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--dark); display: block; margin-bottom: 16px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+.footer-logo-img {
+  height: 64px;
+  width: 64px;
+  object-fit: contain;
+  display: block;
+  border-radius: 50%;
 }
 .footer-tagline {
   font-size: 0.75rem; color: var(--muted);
